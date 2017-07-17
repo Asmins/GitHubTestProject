@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GitHubTestProject/ControllersAndViewModels/Controllers/RepositoriesViewController.swift"
-            timestampString = "521993492.236622"
+            timestampString = "521994537.273655"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
             landmarkName = "openIssuesViewController(_:)"
             landmarkType = "7">
          </BreakpointContent>

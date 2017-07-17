@@ -24,6 +24,7 @@ class RepositoriesViewController: UIViewController {
         self.viewModel?.delegate = self
         self.navigationController?.isNavigationBarHidden = false
         self.title = "Repository"
+        self.navigationController!.navigationBar.tintColor = UIColor.black
         self.tableView.registerCell("ReposTableViewCell", identifier: "repositoryTableViewCell")
     }
 

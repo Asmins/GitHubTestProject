@@ -17,9 +17,23 @@ class IssuesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.registerCell("IssuesTableViewCell", identifier: "issuesTableViewCell")
+        self.settingView()
     }
 
+    private func settingView() {
+        self.title = "Issues"
+        self.navigationController!.navigationBar.topItem!.title = "Back"
+        self.navigationController!.navigationBar.tintColor = UIColor.black
+        self.tableView.registerCell("IssuesTableViewCell", identifier: "issuesTableViewCell")
+
+        let addNewIssuesButton = UIBarButtonItem(title: "Add", style: .done, target: self, action: #selector(addNewIssues))
+        navigationItem.rightBarButtonItem = addNewIssuesButton
+
+    }
+
+    @objc fileprivate func addNewIssues() {
+
+    }
 }
 
 extension IssuesViewController: UITableViewDataSource {
@@ -38,7 +52,7 @@ extension IssuesViewController: UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 90
+        return 115
     }
 
 }

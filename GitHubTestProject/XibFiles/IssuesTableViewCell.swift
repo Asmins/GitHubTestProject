@@ -13,6 +13,7 @@ class IssuesTableViewCell: UITableViewCell {
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var countComments: UILabel!
+    @IBOutlet weak var statusLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,6 +30,14 @@ class IssuesTableViewCell: UITableViewCell {
         self.title.text = issues.title
         self.authorLabel.text = issues.author
         self.countComments.text = "\(issues.comments)"
+        self.statusLabel.text = issues.state
+
+        if issues.state == "open" {
+            self.statusLabel.textColor = UIColor.black
+        } else {
+            self.statusLabel.textColor = UIColor.red
+        }
+
     }
 
 }
