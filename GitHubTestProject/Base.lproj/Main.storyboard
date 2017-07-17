@@ -99,10 +99,10 @@
             </objects>
             <point key="canvasLocation" x="1730.4000000000001" y="133.5832083958021"/>
         </scene>
-        <!--View Controller-->
+        <!--Issues View Controller-->
         <scene sceneID="ytB-Du-2hK">
             <objects>
-                <viewController id="Ttr-A7-89Z" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="issuesViewController" id="Ttr-A7-89Z" customClass="IssuesViewController" customModule="GitHubTestProject" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Mfy-f5-Cfa"/>
                         <viewControllerLayoutGuide type="bottom" id="ZDi-aI-ME1"/>
@@ -110,8 +110,27 @@
                     <view key="view" contentMode="scaleToFill" id="BVx-uf-ic9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="w5O-9w-3Le">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Ttr-A7-89Z" id="7WC-Jc-Ssw"/>
+                                    <outlet property="delegate" destination="Ttr-A7-89Z" id="uRp-FX-0nO"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="w5O-9w-3Le" firstAttribute="top" secondItem="BVx-uf-ic9" secondAttribute="top" id="LES-UT-1L1"/>
+                            <constraint firstAttribute="trailing" secondItem="w5O-9w-3Le" secondAttribute="trailing" id="NB6-LJ-LXP"/>
+                            <constraint firstItem="w5O-9w-3Le" firstAttribute="leading" secondItem="BVx-uf-ic9" secondAttribute="leading" id="jT4-bC-9Ah"/>
+                            <constraint firstItem="ZDi-aI-ME1" firstAttribute="top" secondItem="w5O-9w-3Le" secondAttribute="bottom" id="rzr-HX-uiN"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="w5O-9w-3Le" id="QsX-Bo-dTN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MWl-nl-l97" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

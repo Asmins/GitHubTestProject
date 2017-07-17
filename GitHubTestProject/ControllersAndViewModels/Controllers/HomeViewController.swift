@@ -27,7 +27,7 @@ class HomeViewController: UIViewController {
     }
 }
 
-extension HomeViewController: ActionFromViewController {
+extension HomeViewController: HomeActionViewController {
     
     func showAlertWith(_ title: String, message: String) {
         let controller = UIAlertController().alertControllerWith(title, message: message)

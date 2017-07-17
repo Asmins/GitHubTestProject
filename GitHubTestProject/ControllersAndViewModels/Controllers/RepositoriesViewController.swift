@@ -51,9 +51,15 @@ extension RepositoriesViewController: UITableViewDelegate {
     }
 }
 
-extension RepositoriesViewController: ActionFromViewController {
+extension RepositoriesViewController: RepositoryActionViewController {
     func showAlertWith(_ title: String, message: String) {
         let alertController = UIAlertController().alertControllerWith(title, message: message)
         self.present(alertController, animated: true, completion: nil)
+    }
+
+    func openIssuesViewController(_ issues: [Issues]) {
+        let controller = Router().openViewController(.issuesViewController) as! IssuesViewController
+        controller.viewModel.getListIssues(issues)
+        self.navigationController?.show(controller, sender: self)
     }
 }

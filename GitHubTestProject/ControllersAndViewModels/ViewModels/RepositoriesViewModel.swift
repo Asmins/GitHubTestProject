@@ -9,6 +9,10 @@
 import Foundation
 import UIKit
 
+protocol RepositoryActionViewController : ActionFromViewController {
+    func openIssuesViewController(_ issues: [Issues])
+}
+
 class RepositoriesViewModel: ViewModel {
 
     private let requestService = RequestService.sharedInstance
@@ -16,7 +20,7 @@ class RepositoriesViewModel: ViewModel {
 
     fileprivate var repositories = [Repository]()
 
-    weak var delegate: ActionFromViewController?
+    weak var delegate: RepositoryActionViewController?
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "repositoryTableViewCell", for: indexPath) as! ReposTableViewCell
@@ -42,5 +46,12 @@ class RepositoriesViewModel: ViewModel {
 
     func getData(_ repositories: [Repository]) {
         self.repositories = repositories
+        self.parserService.delegateIssues = self
+    }
+}
+
+extension RepositoriesViewModel: TransferListIssues {
+    func transferListIssues(_ issues: [Issues]) {
+        self.delegate?.openIssuesViewController(issues)
     }
 }

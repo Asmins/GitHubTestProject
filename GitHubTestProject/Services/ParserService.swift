@@ -9,14 +9,20 @@
 import Foundation
 import SwiftyJSON
 
-protocol TransferResult: class {
-    func transferResult(_ repositories: [Repository])
+protocol TransferResult: class { }
+
+protocol TransferListIssues: TransferResult {
     func transferListIssues(_ issues: [Issues])
+}
+
+protocol TransferRepository: TransferResult {
+    func transferResult(_ repositories: [Repository])
 }
 
 class ParserService {
 
-    weak var delegate: TransferResult?
+    weak var delegateRepository: TransferRepository?
+    weak var delegateIssues: TransferListIssues?
 
     private static var instance: ParserService?
     private init() {}
@@ -38,7 +44,7 @@ class ParserService {
             repository.language = json[i]["language"].stringValue
             repositories.append(repository)
         }
-        self.delegate?.transferResult(repositories)
+        self.delegateRepository?.transferResult(repositories)
     }
 
     func parseListIssues(_ data: Data) {
@@ -55,9 +61,9 @@ class ParserService {
         }
 
         if arrayIssues.count != 0 {
-            self.delegate?.transferListIssues(arrayIssues)
+            self.delegateIssues?.transferListIssues(arrayIssues)
         } else {
-            self.delegate?.transferListIssues([Issues]())
+            self.delegateIssues?.transferListIssues([Issues]())
         }
     }
 }

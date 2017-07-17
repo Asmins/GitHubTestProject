@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16C41b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="issuesTableViewCell" rowHeight="90" id="PgO-sH-ZmG" customClass="IssuesTableViewCell" customModule="GitHubTestProject" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PgO-sH-ZmG" id="NMo-Zt-FkO">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Sw-Dg-azh">
+                        <rect key="frame" x="20" y="5" width="335" height="24"/>
+                        <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Bold" family="Bodoni 72" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zer-W5-vdV">
+                        <rect key="frame" x="0.0" y="34" width="187.5" height="25"/>
+                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Asmins" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uj4-uZ-uGl">
+                        <rect key="frame" x="187.5" y="34" width="187.5" height="25"/>
+                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="19" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wa5-0o-CQp">
+                        <rect key="frame" x="187" y="64" width="187.5" height="25"/>
+                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comments:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xPl-0i-Q8r">
+                        <rect key="frame" x="0.0" y="64" width="187.5" height="25"/>
+                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="xPl-0i-Q8r" firstAttribute="height" secondItem="wa5-0o-CQp" secondAttribute="height" id="2jQ-gY-ghn"/>
+                    <constraint firstItem="xPl-0i-Q8r" firstAttribute="width" secondItem="wa5-0o-CQp" secondAttribute="width" id="4Qd-RT-35M"/>
+                    <constraint firstItem="zer-W5-vdV" firstAttribute="height" secondItem="Uj4-uZ-uGl" secondAttribute="height" id="5Aa-bh-Btu"/>
+                    <constraint firstItem="zer-W5-vdV" firstAttribute="width" secondItem="Uj4-uZ-uGl" secondAttribute="width" id="7iS-Hr-lhu"/>
+                    <constraint firstItem="0Sw-Dg-azh" firstAttribute="leading" secondItem="NMo-Zt-FkO" secondAttribute="leading" constant="20" id="AXf-Ro-8IL"/>
+                    <constraint firstAttribute="trailing" secondItem="Uj4-uZ-uGl" secondAttribute="trailing" id="FoQ-IF-rnv"/>
+                    <constraint firstItem="zer-W5-vdV" firstAttribute="top" secondItem="0Sw-Dg-azh" secondAttribute="bottom" constant="5" id="N9c-C3-fjU"/>
+                    <constraint firstAttribute="trailing" secondItem="wa5-0o-CQp" secondAttribute="trailing" id="USe-2G-yX6"/>
+                    <constraint firstAttribute="trailing" secondItem="0Sw-Dg-azh" secondAttribute="trailing" constant="20" id="aVu-sw-u4a"/>
+                    <constraint firstItem="zer-W5-vdV" firstAttribute="leading" secondItem="NMo-Zt-FkO" secondAttribute="leading" id="kdd-pt-m1s"/>
+                    <constraint firstItem="0Sw-Dg-azh" firstAttribute="top" secondItem="NMo-Zt-FkO" secondAttribute="top" constant="5" id="pYJ-6U-dOX"/>
+                    <constraint firstItem="xPl-0i-Q8r" firstAttribute="leading" secondItem="NMo-Zt-FkO" secondAttribute="leading" id="uUh-Mh-wKW"/>
+                    <constraint firstItem="wa5-0o-CQp" firstAttribute="top" secondItem="Uj4-uZ-uGl" secondAttribute="bottom" constant="5" id="uZZ-VZ-ytP"/>
+                    <constraint firstItem="xPl-0i-Q8r" firstAttribute="top" secondItem="zer-W5-vdV" secondAttribute="bottom" constant="5" id="ulx-41-qss"/>
+                    <constraint firstItem="Uj4-uZ-uGl" firstAttribute="leading" secondItem="zer-W5-vdV" secondAttribute="trailing" id="wtt-JG-s9x"/>
+                    <constraint firstItem="Uj4-uZ-uGl" firstAttribute="top" secondItem="0Sw-Dg-azh" secondAttribute="bottom" constant="5" id="xKX-NG-ZCD"/>
+                    <constraint firstItem="wa5-0o-CQp" firstAttribute="leading" secondItem="xPl-0i-Q8r" secondAttribute="trailing" id="zui-LL-AxZ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="authorLabel" destination="Uj4-uZ-uGl" id="cWg-Jt-02o"/>
+                <outlet property="countComments" destination="wa5-0o-CQp" id="ckY-AZ-4YT"/>
+                <outlet property="title" destination="0Sw-Dg-azh" id="Wk6-jY-w26"/>
+            </connections>
+            <point key="canvasLocation" x="-65.5" y="0.0"/>
+        </tableViewCell>
+    </objects>
+</document>

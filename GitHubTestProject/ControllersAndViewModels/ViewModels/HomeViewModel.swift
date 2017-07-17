@@ -10,11 +10,10 @@ import Foundation
 
 protocol ActionFromViewController: class {
     func showAlertWith(_ title: String, message: String)
-    func openRepostoriesView(_ repos: [Repository])
 }
 
-extension ActionFromViewController {
-    func openRepostoriesView(_ repos: [Repository]) {}
+protocol HomeActionViewController: ActionFromViewController {
+    func openRepostoriesView(_ repos: [Repository])
 }
 
 class HomeViewModel: ViewModel {
@@ -22,10 +21,10 @@ class HomeViewModel: ViewModel {
     private let requestService = RequestService.sharedInstance
     private let parserService = ParserService.sharedInstance
 
-    weak var delegate: ActionFromViewController?
+    weak var delegate: HomeActionViewController?
 
     func getListRepositoriesFor(_ userName: String) {
-        self.parserService.delegate = self
+        self.parserService.delegateRepository = self
 
         if userName != "" || userName.characters.count >= 4 {
             self.requestService.getRepositoriesListFor(userName, parameters: [:], headers: [:], result: {(data, error) in
@@ -42,11 +41,7 @@ class HomeViewModel: ViewModel {
     }
 }
 
-extension HomeViewModel: TransferResult {
-    func transferListIssues(_ issues: [Issues]) {
-        /* I don`t know how do option method in protocol,sorry. Don`t work @objc + option */
-    }
-
+extension HomeViewModel: TransferRepository {
     func transferResult(_ repositories: [Repository]) {
         self.delegate?.openRepostoriesView(repositories)
     }

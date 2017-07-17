@@ -23,8 +23,8 @@ class FactoryViewModel {
             return HomeViewModel()
         case .repositories:
             return RepositoriesViewModel()
-//        case .issues:
-//        Must to create issuesModel
+        case .issues:
+            return IssuesViewModel()
         default:
             print("Error")
         }

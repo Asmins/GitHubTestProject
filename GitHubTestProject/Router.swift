@@ -11,6 +11,7 @@ import UIKit
 
 enum ViewControllers {
     case reposotoryViewController
+    case issuesViewController
 }
 
 class Router {
@@ -21,6 +22,9 @@ class Router {
         switch type {
         case .reposotoryViewController :
             return storyboard.instantiateViewController(withIdentifier: "reposViewController") as! RepositoriesViewController
+
+        case .issuesViewController:
+            return storyboard.instantiateViewController(withIdentifier: "issuesViewController") as! IssuesViewController
         default:
             print("Error")
         }
