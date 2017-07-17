@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16C41b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="repositoryTableViewCell" rowHeight="90" id="qNc-Sm-DYq" customClass="ReposTableViewCell" customModule="GitHubTestProject" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qNc-Sm-DYq" id="BLY-59-kPk">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Name Repositories:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QxE-XX-8Fn">
+                        <rect key="frame" x="10" y="5" width="143.5" height="22"/>
+                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Open issues:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPM-ja-B3m">
+                        <rect key="frame" x="10" y="49" width="95" height="35.5"/>
+                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" horizontalCompressionResistancePriority="749" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QuR-pv-V96">
+                        <rect key="frame" x="163.5" y="5" width="44.5" height="22"/>
+                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" horizontalCompressionResistancePriority="749" text="Language" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YcL-u1-EHM">
+                        <rect key="frame" x="98.5" y="27" width="73.5" height="22"/>
+                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" horizontalCompressionResistancePriority="749" text="Issues" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kgt-8b-NZm">
+                        <rect key="frame" x="115" y="55" width="44" height="24.5"/>
+                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Language:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cmM-f7-7VD">
+                        <rect key="frame" x="10" y="27" width="78.5" height="22"/>
+                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="YcL-u1-EHM" firstAttribute="top" secondItem="QuR-pv-V96" secondAttribute="bottom" id="Btc-gG-HaI"/>
+                    <constraint firstItem="QuR-pv-V96" firstAttribute="leading" secondItem="QxE-XX-8Fn" secondAttribute="trailing" constant="10" id="DmX-UH-wE9"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="QuR-pv-V96" secondAttribute="trailing" constant="20" id="E1M-aW-Lbl"/>
+                    <constraint firstItem="QxE-XX-8Fn" firstAttribute="leading" secondItem="BLY-59-kPk" secondAttribute="leading" constant="10" id="E8a-ve-WjL"/>
+                    <constraint firstItem="kgt-8b-NZm" firstAttribute="leading" secondItem="gPM-ja-B3m" secondAttribute="trailing" constant="10" id="FPB-hi-mbv"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="kgt-8b-NZm" secondAttribute="trailing" constant="20" id="GRQ-GZ-CuK"/>
+                    <constraint firstItem="kgt-8b-NZm" firstAttribute="top" secondItem="YcL-u1-EHM" secondAttribute="bottom" constant="6" id="Kp5-9g-0Ov"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="YcL-u1-EHM" secondAttribute="trailing" constant="20" id="QhG-8b-BVQ"/>
+                    <constraint firstAttribute="bottom" secondItem="gPM-ja-B3m" secondAttribute="bottom" constant="5" id="Qi8-eh-Eo6"/>
+                    <constraint firstItem="gPM-ja-B3m" firstAttribute="top" secondItem="cmM-f7-7VD" secondAttribute="bottom" id="V4b-aT-qOD"/>
+                    <constraint firstItem="gPM-ja-B3m" firstAttribute="leading" secondItem="BLY-59-kPk" secondAttribute="leading" constant="10" id="bI2-un-u3W"/>
+                    <constraint firstItem="cmM-f7-7VD" firstAttribute="top" secondItem="QxE-XX-8Fn" secondAttribute="bottom" id="bLb-Ia-wT0"/>
+                    <constraint firstItem="QuR-pv-V96" firstAttribute="top" secondItem="BLY-59-kPk" secondAttribute="top" constant="5" id="eb8-vJ-fSi"/>
+                    <constraint firstItem="YcL-u1-EHM" firstAttribute="leading" secondItem="cmM-f7-7VD" secondAttribute="trailing" constant="10" id="hRc-fh-bVO"/>
+                    <constraint firstItem="QxE-XX-8Fn" firstAttribute="top" secondItem="BLY-59-kPk" secondAttribute="top" constant="5" id="iaU-66-Jqj"/>
+                    <constraint firstAttribute="bottom" secondItem="kgt-8b-NZm" secondAttribute="bottom" constant="10" id="jIg-Zs-zAZ"/>
+                    <constraint firstItem="cmM-f7-7VD" firstAttribute="leading" secondItem="BLY-59-kPk" secondAttribute="leading" constant="10" id="rta-X9-LuH"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="languageLabel" destination="YcL-u1-EHM" id="YhR-qZ-zCN"/>
+                <outlet property="nameRepositoryLabel" destination="QuR-pv-V96" id="Hpz-65-x9m"/>
+                <outlet property="openIssues" destination="kgt-8b-NZm" id="QMT-tj-lcb"/>
+            </connections>
+            <point key="canvasLocation" x="-23.5" y="121"/>
+        </tableViewCell>
+    </objects>
+</document>
